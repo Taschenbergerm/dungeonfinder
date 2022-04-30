@@ -1,0 +1,22 @@
+[
+	{
+		"id": "3fb6d97c-d3c5-40bf-8fed-7d8b5287aca8",
+		"email": "example@example.com",
+		"first-name": "Example",
+		"last-name": "Example",
+		"created": "2022-04-11 15:55:23",
+		"updated": "2022-04-11 15:55:23",
+		"dm-id": "6e8d67c4-e83b-439c-919f-58bdb051edcf",
+		"player-id": "1e6a2239-ef3c-4610-8e48-0fc1d374e7c4"
+	}, 
+	{
+		"id": "9eea7edb-8196-42d6-bc42-8b35d7d4ec1d", 
+		"email": "wayne@example.com",
+		"first-name": "Wayne", 
+		"last-name": "johnnsen",
+		"created": "2022-04-20 08:00:23",
+		"updated": "2022-04-20 21:12:34",
+		"dm-id": "af31e890-dccb-4026-902d-1c21ae63c6b5",
+		"player-id": "63cd1669-7684-439c-845d-436a57adc6af"
+	}
+]

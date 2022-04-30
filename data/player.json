@@ -1,0 +1,35 @@
+{
+	"id": "1e6a2239-ef3c-4610-8e48-0fc1d374e7c4",
+	"characters": {
+		"f6231642-550c-4fbf-ac8b-c3ecb198345a": {
+			"name": "Rawrawgar", 
+			"description": "Brutal and dump Babarian", 
+			"stats": {
+				"strength": {
+					"value": 14,
+					"modifier": 2
+				},
+				"constitution": {
+					"value": 15,
+					"modifier": 2
+				},
+				"initiative": {
+					"value": 11,
+					"modifier": 0
+				},
+				"wisdom": {
+					"value": 8,
+					"modifier": -1
+				},
+				"intelligence": {
+					"value": 5,
+					"modifier": -3
+				}, 
+				"charisma": {
+					"value": 9,
+					"modifier": -1
+				}
+			}
+		}
+	}
+}
