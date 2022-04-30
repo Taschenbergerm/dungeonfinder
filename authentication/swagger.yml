@@ -1,0 +1,84 @@
+---
+swagger: "2.0"
+
+info:
+  description: Authentication for the DungeonFinder Application
+  title: DungenPass
+  version: 0.1.0
+schemes:
+  - http
+
+definitions:
+  error:
+    type: object
+    required:
+      - message
+    properties:
+      code:
+        type: integer
+        format: int64
+      message:
+        type: string
+  Login:
+    type: object
+    required:
+      - id
+      - token
+    properties:
+      id:
+        type: string
+      token:
+        type: string
+
+paths:
+  /rest/v1/login:
+    get:
+      tags:
+        - auth
+      parameters:
+        - name: email
+          in: path
+          required: true
+          type: string
+        - name: password
+          in: query
+          required: true
+          type: string
+          
+      responses:
+        200:
+          description: Return Authtoken
+          schema:
+            type: object
+            items:
+              $ref: "#/definitions/Login"
+        404:
+          description: A user with the specified ID was not found.
+        default:
+          description: generic error response
+          schema:
+            $ref: "#/definitions/error"
+  /rest/v1/validate-token:
+    get:
+      tags:
+        - auth
+      parameters:
+        - name: id
+          in: path
+          type: string 
+          format: string
+          required: true
+        - name: token
+          in: query
+          type: string
+          format: string
+          required: true
+      responses:
+        200:
+          description: Check whether a token is still valid
+          schema:
+            type: string
+          default:
+            description: generic error response 
+            schema:
+              $ref: "#/definitions/error"
