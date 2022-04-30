@@ -1,0 +1,79 @@
+@startmindmap
+* **Dungeon Finder**
+** UI - Svelte
+*** Group
+*** Session 
+*** User Profile 
+**** DM Profile 
+**** Player Profile 
+
+** Backend - Micro services
+***  User Services
+**** RealUser Service
+*****:DB Model
+<code>
+id uuid 
+email string
+fist-name string 
+last-name string
+user-salt string 
+password hash
+active bool
+created datetime
+updated datetime
+dm-id uuid 
+player-id uuid 
+</code>
+;
+**** Player Service
+*****:DB Models
+
+**PlayerProfile**
+<code>
+id uuid 
+characters: map{uuid:character}
+</code>
+
+**Character**
+<code>
+name string 
+description string  
+stats  object{stats}
+</code>
+
+**Stats** 
+<code>
+strength object{Attribute}
+constitution object{Attribute}
+initiative object{Attribute}
+wisdom object{Attribute}
+intelligence object{Attribute}
+charisma object{Attribute}
+</code>
+
+**Attribute** 
+<code>
+value uint 
+modifier int 
+</code>
+;
+**** DM Service
+****:DB-Model
+<code>
+id uuid
+synonym string
+adventures array{adventure}
+groups array{group-id}
+</code>
+;
+*** Session Service 
+*** Group Service 
+****:DB-Model
+<code>
+id uuid
+name string
+participants array{user-id}
+dm uuid
+</code>
+;
+@endmindmap
