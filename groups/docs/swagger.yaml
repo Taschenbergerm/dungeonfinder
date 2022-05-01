@@ -1,0 +1,45 @@
+basePath: /api/v1
+info:
+  contact: {}
+  description: API to the Group Management Service
+  title: GroupManagementService
+  version: alpha
+paths:
+  /greet/{name}:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: Name to Greet
+        in: path
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Say Hello to a User
+      tags:
+      - greetings
+  /groups:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: "false"
+        in: query
+        name: open
+        type: boolean
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: struct
+      summary: Get all available Groups
+      tags:
+      - groups
+swagger: "2.0"

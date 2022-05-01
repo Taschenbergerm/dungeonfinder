@@ -1,0 +1,70 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API to the Group Management Service",
+        "title": "GroupManagementService",
+        "contact": {},
+        "version": "alpha"
+    },
+    "basePath": "/api/v1",
+    "paths": {
+        "/greet/{name}": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "greetings"
+                ],
+                "summary": "Say Hello to a User",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Name to Greet",
+                        "name": "name",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/groups": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "groups"
+                ],
+                "summary": "Get all available Groups",
+                "parameters": [
+                    {
+                        "type": "boolean",
+                        "description": "false",
+                        "name": "open",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "struct"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
